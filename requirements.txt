@@ -1,0 +1,6 @@
+# No external Python dependencies required — this project uses only the standard library.
+# If you add third-party packages, pin them here, e.g.:
+# requests==2.31.0
+
+# Recommended Python version
+python>=3.10
