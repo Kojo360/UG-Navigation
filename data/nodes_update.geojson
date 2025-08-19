@@ -1,0 +1,2240 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-08-19T19:33:35Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1356937858",
+        "amenity": "pharmacy",
+        "name": "Health Shop Mini Mart"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.170889,
+          5.6383278
+        ]
+      },
+      "id": "node/1356937858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1508412431",
+        "amenity": "atm",
+        "name": "SG-SSB",
+        "operator": "SG-SSB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1789641,
+          5.6478457
+        ]
+      },
+      "id": "node/1508412431"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1508412434",
+        "amenity": "fuel",
+        "brand": "Total",
+        "brand:wikidata": "Q154037",
+        "brand:wikipedia": "fr:TotalEnergies",
+        "compressed_air": "yes",
+        "name": "Total"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.178974,
+          5.647492
+        ]
+      },
+      "id": "node/1508412434"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1775844711",
+        "amenity": "fuel",
+        "brand": "Engen",
+        "brand:wikidata": "Q3054251",
+        "brand:wikipedia": "en:Engen Petroleum",
+        "name": "Engen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.167937,
+          5.6592271
+        ]
+      },
+      "id": "node/1775844711"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1775844715",
+        "amenity": "police",
+        "check_date": "2023-10-31",
+        "internet_access": "no",
+        "name": "Legon Police Station",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.179585,
+          5.6506714
+        ]
+      },
+      "id": "node/1775844715"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1775844718",
+        "amenity": "place_of_worship",
+        "denomination": "baptist",
+        "name": "Trinity Babtist Church",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1679059,
+          5.6585354
+        ]
+      },
+      "id": "node/1775844718"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1801462419",
+        "amenity": "doctors"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1720217,
+          5.6364024
+        ]
+      },
+      "id": "node/1801462419"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1986177615",
+        "amenity": "college",
+        "name": "Institute For Environment & Sanitation Studies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1819874,
+          5.6535146
+        ]
+      },
+      "id": "node/1986177615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2068210669",
+        "amenity": "veterinary",
+        "name": "East Legon Veteinary Centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1756336,
+          5.6412384
+        ]
+      },
+      "id": "node/2068210669"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2068210674",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:region": "Greater Accra",
+        "addr:street": "La Bawaleshi Road",
+        "addr:suburb": "Okponglo",
+        "alt_name": "Ecobank - Okponglo Branch",
+        "amenity": "bank",
+        "atm": "yes",
+        "branch": "Okponglo",
+        "brand": "Ecobank",
+        "brand:wikidata": "Q930225",
+        "brand:wikipedia": "en:Ecobank",
+        "contact:facebook": "EcobankGhanaPLC",
+        "contact:instagram": "ecobankghanaplc",
+        "contact:linkedin": "ecobankghanaplc",
+        "contact:twitter": "EcobankGhanaPLC",
+        "contact:youtube": "ecobanktv",
+        "email": "ecobankenquiries@ecobank.com",
+        "money_transfer": "rapidtransfer;western_union;moneygram;ria",
+        "name": "Ecobank",
+        "opening_hours": "Mo-Fr 08:30-16:00; Sa 09:00-14:00; PH off",
+        "operator": "Ecobank Ghana PLC",
+        "operator:type": "public",
+        "operator:wikidata": "Q5333155",
+        "operator:wikipedia": "en:Ecobank Ghana",
+        "phone": "+233 28 955 9792;+233 27 777 6474",
+        "website": "https://ecobank.com/gh/personal-banking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1750258,
+          5.6412311
+        ]
+      },
+      "id": "node/2068210674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2248903599",
+        "amenity": "restaurant",
+        "name": "Tayiba Restaurant",
+        "name:en": "Tayiba Restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.188437,
+          5.6668923
+        ]
+      },
+      "id": "node/2248903599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2714795626",
+        "access": "private",
+        "amenity": "fuel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1816696,
+          5.6476845
+        ]
+      },
+      "id": "node/2714795626"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2940229221",
+        "amenity": "cafe",
+        "name": "Nubuke Foundation",
+        "website": "https://www.nubukefoundation.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1745988,
+          5.6363555
+        ]
+      },
+      "id": "node/2940229221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2940229222",
+        "amenity": "restaurant",
+        "cuisine": "chinese",
+        "name": "Royal Emperor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1759748,
+          5.6399694
+        ]
+      },
+      "id": "node/2940229222"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3103575771",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "UBA",
+        "brand:wikidata": "Q513457",
+        "brand:wikipedia": "en:United Bank for Africa",
+        "name": "UBA",
+        "official_name": "United Bank for Africa",
+        "opening_hours": "Mo-Sa 08:00-16:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1654227,
+          5.6402645
+        ]
+      },
+      "id": "node/3103575771"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3149970146",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Access Bank",
+        "brand:wikidata": "Q4672418",
+        "brand:wikipedia": "en:Access Bank plc",
+        "name": "Access Bank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1652768,
+          5.6600709
+        ]
+      },
+      "id": "node/3149970146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3149970147",
+        "amenity": "fuel",
+        "brand": "Allied",
+        "brand:wikidata": "Q126097124",
+        "name": "Allied",
+        "operator": "Allied Company Limited",
+        "operator:type": "private"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1689331,
+          5.6558941
+        ]
+      },
+      "id": "node/3149970147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3425613994",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:region": "Greater Accra",
+        "addr:street": "Akilagpa Sawyerr Road",
+        "addr:suburb": "Legon",
+        "alt_name": "Ecobank - Legon Branch",
+        "amenity": "bank",
+        "atm": "yes",
+        "branch": "Legon",
+        "brand": "Ecobank",
+        "brand:wikidata": "Q930225",
+        "brand:wikipedia": "en:Ecobank",
+        "contact:facebook": "EcobankGhanaPLC",
+        "contact:instagram": "ecobankghanaplc",
+        "contact:linkedin": "ecobankghanaplc",
+        "contact:twitter": "EcobankGhanaPLC",
+        "contact:youtube": "ecobanktv",
+        "email": "ecobankenquiries@ecobank.com",
+        "money_transfer": "rapidtransfer;western_union;moneygram;ria",
+        "name": "Ecobank",
+        "opening_hours": "Mo-Fr 08:30-16:00; Sa 09:00-14:00; PH off",
+        "operator": "Ecobank Ghana PLC",
+        "operator:type": "public",
+        "operator:wikidata": "Q5333155",
+        "operator:wikipedia": "en:Ecobank Ghana",
+        "phone": "+233 30 393 9594;+233 30 393 9595",
+        "website": "https://ecobank.com/gh/personal-banking"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1848924,
+          5.6425461
+        ]
+      },
+      "id": "node/3425613994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3425613995",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Republic Bank",
+        "brand:wikidata": "Q7314386",
+        "name": "Republic Bank",
+        "old_name": "hfc bank",
+        "operator": "Republic Bank (Ghana) Limited",
+        "operator:type": "public",
+        "operator:wikidata": "Q4039966"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1849777,
+          5.6432313
+        ]
+      },
+      "id": "node/3425613995"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3462084089",
+        "alt_name": "Kentucky Fried Chicken",
+        "amenity": "fast_food",
+        "brand": "KFC",
+        "brand:wikidata": "Q524757",
+        "brand:wikipedia": "en:KFC",
+        "cuisine": "chicken",
+        "name": "KFC",
+        "operator": "KFC",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1693996,
+          5.6393323
+        ]
+      },
+      "id": "node/3462084089"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3462088441",
+        "amenity": "fuel",
+        "brand": "Goil",
+        "brand:wikidata": "Q5555383",
+        "brand:wikipedia": "en:Ghana Oil Company",
+        "name": "Goil",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1774687,
+          5.6603126
+        ]
+      },
+      "id": "node/3462088441"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3802485229",
+        "amenity": "college",
+        "name": "Radford University College"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1714394,
+          5.6378571
+        ]
+      },
+      "id": "node/3802485229"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3802490981",
+        "amenity": "restaurant",
+        "name": "Mc Joy Restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1689287,
+          5.6395725
+        ]
+      },
+      "id": "node/3802490981"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3802490982",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:region": "Greater Accra",
+        "addr:street": "Lagos Avenue",
+        "addr:suburb": "East Legon",
+        "amenity": "bank",
+        "branch": "East Legon",
+        "brand": "Bank of Africa",
+        "brand:wikidata": "Q2882627",
+        "brand:wikipedia": "en:Bank of Africa Group",
+        "contact:facebook": "bankofafricagh",
+        "contact:instagram": "bankofafricagh",
+        "contact:linkedin": "bankofafricagh",
+        "contact:pobox": "PMB L42, Legon, Accra",
+        "contact:twitter": "bankofafricagh",
+        "description": "Plot No. 38B Lagos Avenue, East Legon",
+        "email": "eastlegon.bo@boaghana.com",
+        "fax": "+233 30 252 0457",
+        "money_transfer": "western_union;money_gram;zeepay;mtn_momo",
+        "name": "Bank of Africa",
+        "opening_hours": "Mo-Fr 09:00-16:00; PH off",
+        "phone": "+233 30 252 0453;+233 30 252 0455",
+        "short_name": "BOA",
+        "website": "https://boaghana.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1665245,
+          5.6402974
+        ]
+      },
+      "id": "node/3802490982"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3802491200",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:ghanapostgps": "GA-378-0107",
+        "addr:postcode": "GA378",
+        "addr:region": "Greater Accra",
+        "addr:street": "Lagos Avenue",
+        "addr:suburb": "East Legon",
+        "alt_name": "CalBank - East Legon Branch",
+        "amenity": "bank",
+        "atm": "yes",
+        "branch": "East Legon",
+        "brand": "CalBank",
+        "brand:wikidata": "Q4035559",
+        "contact:linkedin": "calbank-plc",
+        "contact:pobox": "P. O. Box 14596 Accra, Ghana",
+        "contact:twitter": "CalBankPLC",
+        "contact:whatsapp": "+233 24 242 6398",
+        "contact:youtube": "https://www.youtube.com/channel/UCzczU8uI8AFTaXfM-2GDhYQ",
+        "email": "customercare@calbank.net",
+        "facebook": "CalBankPLC",
+        "name": "CalBank",
+        "operator": "CalBank PLC",
+        "operator:type": "public",
+        "operator:wikidata": "Q4035559",
+        "operator:wikipedia": "en:CalBank",
+        "phone": "+233 026 608 8998;+233 54 434 1576;+233 54 011 0942",
+        "website": "https://calbank.net"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1707045,
+          5.6383953
+        ]
+      },
+      "id": "node/3802491200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3803696727",
+        "amenity": "fuel",
+        "brand": "Benab Oil",
+        "brand:wikidata": "Q127419392",
+        "name": "Benab Oil",
+        "operator": "Benab Oil Company Limited",
+        "operator:wikidata": "Q127419392"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1775824,
+          5.6677142
+        ]
+      },
+      "id": "node/3803696727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3803696733",
+        "amenity": "bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1712991,
+          5.6678325
+        ]
+      },
+      "id": "node/3803696733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3838547757",
+        "amenity": "fuel",
+        "brand": "Total",
+        "brand:wikidata": "Q154037",
+        "brand:wikipedia": "fr:TotalEnergies",
+        "name": "Total Atomic Junction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1783964,
+          5.6670238
+        ]
+      },
+      "id": "node/3838547757"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3971490558",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:region": "Greater Accra",
+        "addr:street": "Jubilee Link",
+        "addr:suburb": "Legon",
+        "alt_name": "CalBank - Legon Branch",
+        "amenity": "bank",
+        "atm": "yes",
+        "branch": "Legon",
+        "brand": "CalBank",
+        "brand:wikidata": "Q4035559",
+        "contact:linkedin": "calbank-plc",
+        "contact:pobox": "P. O. Box 14596 Accra, Ghana",
+        "contact:twitter": "CalBankPLC",
+        "contact:whatsapp": "+233 24 242 6398",
+        "contact:youtube": "https://www.youtube.com/channel/UCzczU8uI8AFTaXfM-2GDhYQ",
+        "email": "customercare@calbank.net",
+        "facebook": "CalBankPLC",
+        "name": "CalBank",
+        "operator": "CalBank PLC",
+        "operator:type": "public",
+        "operator:wikidata": "Q4035559",
+        "operator:wikipedia": "en:CalBank",
+        "phone": "+233 59 383 0455",
+        "website": "https://calbank.net"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1857784,
+          5.6425946
+        ]
+      },
+      "id": "node/3971490558"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4131175826",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1898663,
+          5.6450876
+        ]
+      },
+      "id": "node/4131175826"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4211404350",
+        "amenity": "school",
+        "name": "LA-Bawaleshie JHS & Primary School"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1674865,
+          5.6421666
+        ]
+      },
+      "id": "node/4211404350"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4246099076",
+        "amenity": "restaurant",
+        "name": "Bush Canteen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1809222,
+          5.6480697
+        ]
+      },
+      "id": "node/4246099076"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4268439767",
+        "amenity": "fire_station",
+        "name": "University Fire Station Legon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1812207,
+          5.6484568
+        ]
+      },
+      "id": "node/4268439767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4370298139",
+        "amenity": "restaurant",
+        "name": "Fillie B's"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1661658,
+          5.6358771
+        ]
+      },
+      "id": "node/4370298139"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4423928092",
+        "amenity": "taxi",
+        "name": "Legon Taxi Rank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1789632,
+          5.6408962
+        ]
+      },
+      "id": "node/4423928092"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4451500937",
+        "amenity": "atm",
+        "brand": "Republic Bank",
+        "brand:wikidata": "Q7314386",
+        "cash_in": "yes",
+        "name": "Republic Bank",
+        "old_name": "hfc bank",
+        "operator": "Republic Bank",
+        "operator:type": "public",
+        "operator:wikidata": "Q7314386"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1870528,
+          5.6493371
+        ]
+      },
+      "id": "node/4451500937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4492831390",
+        "amenity": "atm",
+        "brand": "CalBank",
+        "brand:wikidata": "Q4035559",
+        "opening_hours": "24/7",
+        "operator": "CalBank",
+        "operator:type": "public",
+        "operator:wikidata": "Q4035559"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1890544,
+          5.6507859
+        ]
+      },
+      "id": "node/4492831390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4518650090",
+        "amenity": "atm",
+        "cash_in": "yes",
+        "check_date": "2024-11-13",
+        "opening_hours": "24/7",
+        "operator": "All Banks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1865162,
+          5.6469774
+        ]
+      },
+      "id": "node/4518650090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4522495792",
+        "amenity": "bank",
+        "brand": "Access Bank",
+        "brand:wikidata": "Q4672418",
+        "brand:wikipedia": "en:Access Bank plc",
+        "name": "Access Bank",
+        "name:en": "Access Bank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1858097,
+          5.6429499
+        ]
+      },
+      "id": "node/4522495792"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4522495793",
+        "alt_name": "CBG",
+        "amenity": "bank",
+        "brand": "Consolidated Bank Ghana",
+        "brand:wikidata": "Q56277912",
+        "name": "Consolidated Bank Ghana",
+        "old_name": "Unibank",
+        "operator": "Consolidated Bank Ghana Limited",
+        "operator:type": "parastatal",
+        "operator:wikidata": "Q56277912",
+        "short_name": "CBG",
+        "website": "https://cbg.com.gh/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1856608,
+          5.6430552
+        ]
+      },
+      "id": "node/4522495793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4554919900",
+        "addr:city": "Okponglo",
+        "amenity": "pharmacy",
+        "name": "Emporium Pharmacy",
+        "operator": "8am - 9pm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1772622,
+          5.6413071
+        ]
+      },
+      "id": "node/4554919900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4600171449",
+        "amenity": "fast_food",
+        "name": "Koko Joint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1796424,
+          5.6512819
+        ]
+      },
+      "id": "node/4600171449"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4637583291",
+        "amenity": "school",
+        "check_date": "2024-12-20",
+        "name": "West Africa Centre for Crop Improvement",
+        "short_name": "WACCI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1841306,
+          5.6491112
+        ]
+      },
+      "id": "node/4637583291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4741326737",
+        "amenity": "school",
+        "name": "Bevy Bi-Lingual School"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1650241,
+          5.6451564
+        ]
+      },
+      "id": "node/4741326737"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4741326738",
+        "amenity": "school",
+        "name": "Buzzy Kids Montessori School"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1688801,
+          5.6468352
+        ]
+      },
+      "id": "node/4741326738"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4741326739",
+        "amenity": "place_of_worship",
+        "name": "Trinity United Church Legon",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1668786,
+          5.6534507
+        ]
+      },
+      "id": "node/4741326739"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4752766527",
+        "amenity": "bank",
+        "name": "UMB",
+        "name:en": "UMB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1853858,
+          5.6425235
+        ]
+      },
+      "id": "node/4752766527"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4790445228",
+        "amenity": "bar",
+        "name": "Diddies Pub",
+        "name:en": "Diddies Pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1665056,
+          5.6357668
+        ]
+      },
+      "id": "node/4790445228"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4841525285",
+        "amenity": "bank",
+        "brand": "Prudential Bank",
+        "brand:wikidata": "Q7252979",
+        "name": "Prudential Bank",
+        "name:en": "Prudential Bank",
+        "operator": "Prudential Bank Limited",
+        "operator:type": "private",
+        "operator:wikidata": "Q7252979"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1859194,
+          5.6429477
+        ]
+      },
+      "id": "node/4841525285"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4841525286",
+        "amenity": "bank",
+        "brand": "Stanbic Bank",
+        "brand:wikidata": "Q7597999",
+        "brand:wikipedia": "en:Stanbic Bank",
+        "name": "Stanbic Bank",
+        "name:en": "Stanbic Bank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1855191,
+          5.6429557
+        ]
+      },
+      "id": "node/4841525286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4841525287",
+        "amenity": "bank",
+        "brand": "Republic Bank",
+        "brand:wikidata": "Q7314386",
+        "name": "Republic Bank",
+        "old_name": "hfc bank",
+        "operator": "Republic Bank (Ghana) Limited",
+        "operator:type": "public",
+        "operator:wikidata": "Q4039966"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1857129,
+          5.6429518
+        ]
+      },
+      "id": "node/4841525287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4849476720",
+        "amenity": "fountain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1856612,
+          5.6500789
+        ]
+      },
+      "id": "node/4849476720"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4936066521",
+        "alt_name": "First Love Church",
+        "amenity": "place_of_worship",
+        "denomination": "charismatic",
+        "name": "First Love Centre - The Mega Church",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1672423,
+          5.6569505
+        ]
+      },
+      "id": "node/4936066521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4943837822",
+        "amenity": "pharmacy",
+        "branch": "Legon Retail",
+        "contact:email": "retails@ernestchemists.com",
+        "contact:phone": "+233 303 996 7865",
+        "contact:whatsapp": "+233 50 1608 865",
+        "healthcare": "pharmacy",
+        "name": "Ernest Chemist",
+        "opening_hours": "Mo-Fr 08:00-19:00",
+        "operator": "Ernest Chemists Limited",
+        "website": "https://ernestchemists.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1791792,
+          5.6531812
+        ]
+      },
+      "id": "node/4943837822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4972567405",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:region": "Greater Accra",
+        "addr:street": "Dr. J.B. Danquah Avenue",
+        "addr:suburb": "Legon",
+        "alt_name": "Standard Chartered - Legon Branch",
+        "amenity": "bank",
+        "atm": "yes",
+        "branch": "Legon",
+        "brand": "Standard Chartered",
+        "brand:wikidata": "Q548278",
+        "brand:wikipedia": "en:Standard Chartered",
+        "contact:instagram": "stanchartgh",
+        "contact:linkedin": "standardchartered",
+        "contact:pobox": "P. O. Box 768, Accra",
+        "contact:twitter": "StanChartGH",
+        "description": "Near Kingdom Bookshop Legon Campus",
+        "email": "feedback.ghana@sc.com",
+        "facebook": "StandardCharteredGH",
+        "name": "Standard Chartered",
+        "opening_hours": "Mo-Fr 08:30-15:00; PH off",
+        "operator": "Standard Chartered Ghana",
+        "operator:type": "public",
+        "operator:wikidata": "Q7598195",
+        "operator:wikipedia": "en:Standard Chartered Ghana",
+        "phone": "+233 30 2610750; +233 30 263 3428; +233 30 274 0100",
+        "website": "https://www.sc.com/gh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1864861,
+          5.6508919
+        ]
+      },
+      "id": "node/4972567405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4972575279",
+        "amenity": "atm",
+        "brand": "Ecobank",
+        "brand:wikidata": "Q930225",
+        "brand:wikipedia": "en:Ecobank",
+        "name": "Ecobank",
+        "operator": "Ecobank",
+        "operator:type": "public",
+        "operator:wikidata": "Q930225",
+        "operator:wikipedia": "en:Ecobank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.188485,
+          5.6519994
+        ]
+      },
+      "id": "node/4972575279"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4972695857",
+        "alt_name": "Kentucky Fried Chicken",
+        "amenity": "fast_food",
+        "brand": "KFC",
+        "brand:wikidata": "Q524757",
+        "brand:wikipedia": "en:KFC",
+        "cuisine": "chicken",
+        "delivery": "yes",
+        "drive_through": "yes",
+        "name": "KFC",
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "takeaway": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1884366,
+          5.6678187
+        ]
+      },
+      "id": "node/4972695857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4972695859",
+        "amenity": "fuel",
+        "brand": "Shell",
+        "brand:wikidata": "Q110716465",
+        "brand:wikipedia": "en:Royal Dutch Shell",
+        "fuel:diesel": "yes",
+        "fuel:petrol": "yes",
+        "name": "Shell",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1884936,
+          5.6676312
+        ]
+      },
+      "id": "node/4972695859"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4988373760",
+        "amenity": "school",
+        "name": "Ideal College"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1687698,
+          5.6584618
+        ]
+      },
+      "id": "node/4988373760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4988381303",
+        "amenity": "bank",
+        "name": "umb",
+        "name:it": "UMB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1654528,
+          5.6595227
+        ]
+      },
+      "id": "node/4988381303"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4988382796",
+        "amenity": "pub",
+        "name": "Diana Spot"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1761192,
+          5.6410103
+        ]
+      },
+      "id": "node/4988382796"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5108895935",
+        "amenity": "school",
+        "name": "Ebenezer Nursery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1927394,
+          5.6671424
+        ]
+      },
+      "id": "node/5108895935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5139474493",
+        "amenity": "restaurant",
+        "name": "De'lish"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.173566,
+          5.6414108
+        ]
+      },
+      "id": "node/5139474493"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5144389318",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:region": "Greater Accra",
+        "addr:street": "Dr. J.B. Danquah Avenue",
+        "addr:suburb": "Legon",
+        "alt_name": "Absa - Legon Campus Branch",
+        "amenity": "bank",
+        "atm": "yes",
+        "branch": "Legon Campus",
+        "brand": "Absa",
+        "brand:wikidata": "Q58641733",
+        "brand:wikipedia": "en:Absa Group Limited",
+        "check_date:opening_hours": "2025-02-21",
+        "contact:instagram": "absaghana",
+        "contact:linkedin": "absa-ghana",
+        "contact:twitter": "AbsaGhana",
+        "contact:whatsapp": "+233 50 164 4644",
+        "contact:youtube": "https://www.youtube.com/channel/UCKpKPyfJ69tf7lnxudpzKJQ",
+        "email": "service.excellence.GH@absa.africa",
+        "facebook": "AbsaGhana",
+        "name": "Absa",
+        "old_name": "Barclays",
+        "opening_hours": "Mo-Fr 08:30-16:30; PH off",
+        "operator": "Absa Bank Ghana Limited",
+        "operator:type": "public",
+        "operator:wikidata": "Q96371413",
+        "operator:wikipedia": "en:Absa Bank Ghana",
+        "phone": "+233 57 770 9631",
+        "website": "https://www.absa.com.gh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1863873,
+          5.6508864
+        ]
+      },
+      "id": "node/5144389318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5209797480",
+        "amenity": "pub",
+        "name": "Contact"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1767035,
+          5.6693377
+        ]
+      },
+      "id": "node/5209797480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5209798229",
+        "amenity": "pharmacy",
+        "name": "ECP Pharmacy Wholesale",
+        "website": "www.ecpl.com.gh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1769998,
+          5.6691692
+        ]
+      },
+      "id": "node/5209798229"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5209798230",
+        "addr:housenumber": "14",
+        "addr:street": "Kofi Annan Avenue",
+        "amenity": "school",
+        "name": "Kids at Heart International School",
+        "opening_hours": "Mo-Fr 06:30-17:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1788679,
+          5.6697644
+        ]
+      },
+      "id": "node/5209798230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5210899221",
+        "amenity": "pharmacy",
+        "name": "Radiance Pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1880574,
+          5.6686491
+        ]
+      },
+      "id": "node/5210899221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235959916",
+        "amenity": "pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1722474,
+          5.641014
+        ]
+      },
+      "id": "node/5235959916"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962341",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:region": "Greater Accra",
+        "addr:street": "Lagos Avenue",
+        "addr:suburb": "East Legon",
+        "alt_name": "Standard Chartered - East Legon Branch",
+        "amenity": "bank",
+        "branch": "East Legon",
+        "brand": "Standard Chartered",
+        "brand:wikidata": "Q548278",
+        "brand:wikipedia": "en:Standard Chartered",
+        "contact:instagram": "stanchartgh",
+        "contact:linkedin": "standardchartered",
+        "contact:pobox": "P. O. Box 768, Accra",
+        "contact:twitter": "StanChartGH",
+        "description": "Delino Plaza, Near Mensvic Hotel, Lagos Avenue, East Legon, Accra",
+        "email": "feedback.ghana@sc.com",
+        "facebook": "StandardCharteredGH",
+        "name": "Standard Chartered",
+        "opening_hours": "Mo-Fr 08:30-15:00; PH off",
+        "operator": "Standard Chartered Ghana",
+        "operator:type": "public",
+        "operator:wikidata": "Q7598195",
+        "operator:wikipedia": "en:Standard Chartered Ghana",
+        "phone": "+233 30 263 3518; +233 24 243 6345; +233 30 263 3428; +233 30 274 0100",
+        "website": "https://www.sc.com/gh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1722766,
+          5.6352667
+        ]
+      },
+      "id": "node/5235962341"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962342",
+        "amenity": "place_of_worship",
+        "name": "Eckankar",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1737662,
+          5.6372409
+        ]
+      },
+      "id": "node/5235962342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962345",
+        "amenity": "car_wash",
+        "automated": "no",
+        "email": "niiakooddoye@gmail.com",
+        "name": "Solcal",
+        "phone": "+233 264020041",
+        "self_service": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1725576,
+          5.6410621
+        ]
+      },
+      "id": "node/5235962345"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962350",
+        "amenity": "bureau_de_change",
+        "name": "ROD Forex Bureau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1737806,
+          5.6410696
+        ]
+      },
+      "id": "node/5235962350"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962351",
+        "amenity": "fast_food",
+        "name": "Obaapa Special Food",
+        "phone": "+233 241895060"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1740801,
+          5.6412946
+        ]
+      },
+      "id": "node/5235962351"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962352",
+        "amenity": "car_wash"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1758972,
+          5.6414548
+        ]
+      },
+      "id": "node/5235962352"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962353",
+        "amenity": "college",
+        "name": "Institute of Professional Education"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1775294,
+          5.667888
+        ]
+      },
+      "id": "node/5235962353"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962944",
+        "amenity": "bank",
+        "name": "Heritage Bank",
+        "opening_hours": "Mo-Fr 08:30-18:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1718286,
+          5.6354846
+        ]
+      },
+      "id": "node/5235962944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962945",
+        "amenity": "bank",
+        "name": "SGL Royal Kapita"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1719767,
+          5.638429
+        ]
+      },
+      "id": "node/5235962945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962946",
+        "amenity": "pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1724175,
+          5.6411288
+        ]
+      },
+      "id": "node/5235962946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235962983",
+        "amenity": "place_of_worship",
+        "name": "Christ the Good Shepherd Church",
+        "religion": "christian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1750993,
+          5.642143
+        ]
+      },
+      "id": "node/5235962983"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235963357",
+        "amenity": "bureau_de_change",
+        "name": "Dellino Forex Bureau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1722037,
+          5.6355552
+        ]
+      },
+      "id": "node/5235963357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235963359",
+        "amenity": "pub",
+        "name": "Corner Bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1724154,
+          5.6406372
+        ]
+      },
+      "id": "node/5235963359"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235963361",
+        "amenity": "bank",
+        "name": "GN Bank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1736266,
+          5.6415187
+        ]
+      },
+      "id": "node/5235963361"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235963364",
+        "amenity": "restaurant",
+        "name": "FT Tawakalatu Allah Lah"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1758754,
+          5.6411288
+        ]
+      },
+      "id": "node/5235963364"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235963365",
+        "amenity": "restaurant",
+        "name": "Barita's"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1774548,
+          5.6680598
+        ]
+      },
+      "id": "node/5235963365"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5235963521",
+        "amenity": "pharmacy",
+        "name": "Rhamshiv Pharmacy",
+        "opening_hours": "Mo-Sa 07:00-22:00; Su 15:00-22:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1739646,
+          5.6412601
+        ]
+      },
+      "id": "node/5235963521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5263688621",
+        "amenity": "restaurant",
+        "name": "Yellow Pepper"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1733266,
+          5.6374638
+        ]
+      },
+      "id": "node/5263688621"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5298527043",
+        "addr:street": "Trinity Avenue",
+        "amenity": "college",
+        "contact:email": "info@aau.org",
+        "contact:facebook": "www.facebook.com/Association-of-African-Universities-1591075117807581",
+        "contact:phone": "+233 302774495",
+        "contact:twitter": "https://www.twitter.com/AAU_67",
+        "contact:website": "https://aau.org/",
+        "description": "AAU provides a platform for research, reflection, consultation, debates, co-operation and collaboration on issues pertaining to higher education in Africa.",
+        "name": "Association of African Universities",
+        "name:fr": "Association des universités africaines",
+        "office": "ngo",
+        "operator:type": "public",
+        "project:oif-dfen_carteinnov": "yes",
+        "short_name": "AAU",
+        "source": "local_knowledge;oif-dfen_carteinnov",
+        "source:date": "2017-07-23",
+        "start_date": "1967",
+        "wikidata": "Q743769",
+        "wikipedia": "en:Association of African Universities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.170213,
+          5.6465676
+        ]
+      },
+      "id": "node/5298527043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5300408284",
+        "amenity": "pharmacy",
+        "name": "Solutions Pharmaceuticals Limited",
+        "opening_hours": "Mo-Sa 08:00-21:00, 09:00-18:00; Su 15:00-21:00",
+        "phone": "+233 302432608"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1774232,
+          5.6409902
+        ]
+      },
+      "id": "node/5300408284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5300409375",
+        "amenity": "ice_cream",
+        "name": "The Cuppycake House"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1742496,
+          5.6412743
+        ]
+      },
+      "id": "node/5300409375"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5300409376",
+        "amenity": "pharmacy",
+        "name": "Pillpoint Pharmacy (Retail)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1689755,
+          5.6470772
+        ]
+      },
+      "id": "node/5300409376"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5300409858",
+        "amenity": "bureau_de_change",
+        "name": "Chambers Forex Bureau",
+        "phone": "+233 3022917889"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1751237,
+          5.6412227
+        ]
+      },
+      "id": "node/5300409858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5303626454",
+        "addr:street": "Trinity Avenue",
+        "amenity": "college",
+        "contact:email": "info@cibgh.org",
+        "contact:facebook": "https://facebook.com/cibgh.org",
+        "contact:website": "http://www.cibgh.org",
+        "name": "Chartered Institute of Bankers (Ghana)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1703833,
+          5.6440692
+        ]
+      },
+      "id": "node/5303626454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5464042122",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.168203,
+          5.6595586
+        ]
+      },
+      "id": "node/5464042122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5464042123",
+        "amenity": "atm",
+        "brand": "Ecobank",
+        "brand:wikidata": "Q930225",
+        "brand:wikipedia": "en:Ecobank",
+        "name": "Ecobank",
+        "operator": "Ecobank",
+        "operator:wikidata": "Q930225",
+        "operator:wikipedia": "en:Ecobank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1676129,
+          5.6595372
+        ]
+      },
+      "id": "node/5464042123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5464042126",
+        "amenity": "atm",
+        "name": "Stanbic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1774304,
+          5.6600823
+        ]
+      },
+      "id": "node/5464042126"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5498276412",
+        "amenity": "restaurant",
+        "name": "Legon Hall Barbeque Joint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1895287,
+          5.6487354
+        ]
+      },
+      "id": "node/5498276412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5713216145",
+        "amenity": "fuel",
+        "name": "Oando"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1802505,
+          5.6572876
+        ]
+      },
+      "id": "node/5713216145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5713588948",
+        "amenity": "restaurant",
+        "name": "Taste of Africa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1785268,
+          5.6675139
+        ]
+      },
+      "id": "node/5713588948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5717931867",
+        "alt_name": "GCB Legon",
+        "amenity": "bank",
+        "branch": "legon",
+        "brand": "GCB Bank",
+        "brand:wikidata": "Q1521346",
+        "brand:wikipedia": "en:GCB Bank",
+        "name": "GCB Bank",
+        "opening_hours": "Mo-Sa 08:30-04:00",
+        "operator": "GCB Bank Limited",
+        "operator:type": "public",
+        "operator:wikidata": "Q1521346"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1795931,
+          5.6519986
+        ]
+      },
+      "id": "node/5717931867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5724150672",
+        "amenity": "bench",
+        "backrest": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1880886,
+          5.6678861
+        ]
+      },
+      "id": "node/5724150672"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5724150675",
+        "amenity": "atm",
+        "brand": "Ecobank",
+        "brand:wikidata": "Q930225",
+        "brand:wikipedia": "en:Ecobank",
+        "name": "Ecobank",
+        "operator": "Ecobank",
+        "operator:wikidata": "Q930225",
+        "operator:wikipedia": "en:Ecobank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1881261,
+          5.6678814
+        ]
+      },
+      "id": "node/5724150675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5724150676",
+        "addr:city": "Accra",
+        "addr:country": "GH",
+        "addr:region": "Greater Accra",
+        "addr:street": "Agbogba Ashongman Road",
+        "addr:suburb": "Haatso",
+        "alt_name": "Standard Chartered ATM",
+        "amenity": "atm",
+        "brand": "Standard Chartered",
+        "brand:wikidata": "Q548278",
+        "brand:wikipedia": "en:Standard Chartered",
+        "cash_in": "no",
+        "contact:instagram": "stanchartgh",
+        "contact:linkedin": "standardchartered",
+        "contact:twitter": "StanChartGH",
+        "description": "Haatso Shell Service Station, Opposite Legon Botanical Gardens, Accra",
+        "email": "feedback.ghana@sc.com",
+        "facebook": "StandardCharteredGH",
+        "name": "Standard Chartered ATM",
+        "opening_hours": "24/7",
+        "operator": "Standard Chartered Ghana",
+        "operator:type": "public",
+        "operator:wikidata": "Q7598195",
+        "operator:wikipedia": "en:Standard Chartered Ghana",
+        "phone": "+233 30 263 3428; +233 30 274 0100",
+        "website": "https://www.sc.com/gh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1881448,
+          5.6678701
+        ]
+      },
+      "id": "node/5724150676"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5724150677",
+        "amenity": "atm",
+        "cash_in": "no",
+        "currency:GHC": "yes",
+        "drive_through": "no",
+        "name": "First National Bank",
+        "operator": "First National Bank"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1881616,
+          5.6678601
+        ]
+      },
+      "id": "node/5724150677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5727975623",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.179018,
+          5.6480385
+        ]
+      },
+      "id": "node/5727975623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5734177115",
+        "amenity": "internet_cafe",
+        "check_date": "2023-06-02",
+        "internet_access": "no",
+        "name": "Volta Café",
+        "opening_hours": "24/7",
+        "operator:type": "public/government",
+        "payment:cards": "no",
+        "payment:credit_cards": "no",
+        "payment:debit_cards": "no",
+        "phone": "+233 24 587 2718",
+        "shop": "copyshop",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1894537,
+          5.6516613
+        ]
+      },
+      "id": "node/5734177115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5744469515",
+        "amenity": "atm",
+        "name": "Zenith"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1891882,
+          5.6516214
+        ]
+      },
+      "id": "node/5744469515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5749720245",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Pill Point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1774716,
+          5.6678356
+        ]
+      },
+      "id": "node/5749720245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5751223231",
+        "alt_name": "CBG",
+        "amenity": "bank",
+        "brand": "Consolidated Bank Ghana",
+        "brand:wikidata": "Q56277912",
+        "name": "Consolidated Bank Ghana",
+        "operator": "Consolidated Bank Ghana Limited",
+        "operator:type": "parastatal",
+        "operator:wikidata": "Q56277912",
+        "short_name": "CBG",
+        "website": "https://cbg.com.gh/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1787102,
+          5.667507
+        ]
+      },
+      "id": "node/5751223231"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5751454644",
+        "amenity": "bench",
+        "backrest": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1857845,
+          5.650167
+        ]
+      },
+      "id": "node/5751454644"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5751454651",
+        "amenity": "bench",
+        "backrest": "yes",
+        "colour": "Ash",
+        "material": "wood",
+        "seats": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1855485,
+          5.6494717
+        ]
+      },
+      "id": "node/5751454651"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5751454652",
+        "amenity": "bench",
+        "backrest": "yes",
+        "colour": "Ash",
+        "material": "wood",
+        "seats": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1857711,
+          5.6494697
+        ]
+      },
+      "id": "node/5751454652"
+    }
+  ]
+}

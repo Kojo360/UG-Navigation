@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run UG Navigate",
+            "request": "launch",
+            "mainClass": "ug.campus.Main",
+            "projectName": "UG-Navigation"
+        }
+    ]
+}
