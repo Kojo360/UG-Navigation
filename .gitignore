@@ -1,0 +1,17 @@
+# Ignore compiled Java classes
+out/
+*.class
+
+# Python artifacts
+__pycache__/
+*.pyc
+
+# Data outputs and backups (keep canonical nodes.csv)
+data/edges.csv
+data/route_test_results.csv
+data/*.bak
+data/nodes_clean.csv
+
+# Editor/temp
+*.log
+.DS_Store
