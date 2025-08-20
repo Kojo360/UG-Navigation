@@ -3,4 +3,13 @@
 # requests==2.31.0
 
 # Recommended Python version
+# This project uses the Python standard library for data processing scripts.
+# If you add third-party packages, pin them here, e.g.:
+# requests==2.31.0
+
+# Recommended Python version
 python>=3.10
+
+# Optional (for analysis/plotting)
+# matplotlib==3.8.0
+# pandas==2.1.0

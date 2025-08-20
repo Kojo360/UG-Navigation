@@ -18,6 +18,10 @@ public class RouteFinder {
 
     // Dijkstra's algorithm
     public List<Integer> dijkstra(int src, int dest) {
+        return dijkstraWithEdgePenalty(src, dest, null);
+    }
+
+    private List<Integer> dijkstraWithEdgePenalty(int src, int dest, java.util.function.Function<Edge, Double> weightFn) {
         Map<Integer, Double> dist = new HashMap<>();
         Map<Integer, Integer> prev = new HashMap<>();
         for (int id : graph.nodes.keySet()) dist.put(id, Double.POSITIVE_INFINITY);
@@ -32,7 +36,8 @@ public class RouteFinder {
             if (curr.priority > dist.get(u)) continue;
             if (u == dest) break;
             for (Edge e : graph.adj.get(u)) {
-                double alt = dist.get(u) + e.distanceMeters;
+                double w = (weightFn == null) ? e.distanceMeters : weightFn.apply(e);
+                double alt = dist.get(u) + w;
                 if (alt < dist.get(e.toId)) {
                     dist.put(e.toId, alt);
                     prev.put(e.toId, u);
@@ -108,23 +113,33 @@ public class RouteFinder {
         return r * c;
     }
 
-    // K-alternative routes (simple edge penalization)
+    // K-alternative routes without mutating base edge distances
     public List<List<Integer>> kAlternatives(int src, int dest, int k) {
         List<List<Integer>> routes = new ArrayList<>();
-        Set<Edge> penalized = new HashSet<>();
+        Map<Edge, Integer> penaltyCount = new HashMap<>();
         for (int i = 0; i < k; i++) {
-            List<Integer> path = dijkstra(src, dest);
+            List<Integer> path = dijkstraWithEdgePenalty(src, dest, e -> e.distanceMeters + 1000.0 * penaltyCount.getOrDefault(e, 0));
             if (path.isEmpty()) break;
             routes.add(path);
-            // Penalize edges in this path
+            // increment penalties for edges in path
             for (int j = 0; j < path.size()-1; j++) {
-                for (Edge e : graph.adj.get(path.get(j))) {
-                    if (e.toId == path.get(j+1)) penalized.add(e);
+                int a = path.get(j);
+                int b = path.get(j+1);
+                for (Edge e : graph.adj.get(a)) {
+                    if (e.toId == b) {
+                        penaltyCount.put(e, penaltyCount.getOrDefault(e, 0) + 1);
+                        break;
+                    }
                 }
             }
-            for (Edge e : penalized) e.distanceMeters += 1000; // Add penalty
         }
         return routes;
+    }
+
+    // Diagnostic: compute unpenalized shortest distance only
+    public double shortestDistance(int src, int dest) {
+        List<Integer> path = dijkstra(src, dest);
+        return totalDistance(path);
     }
 
     // Landmark filter

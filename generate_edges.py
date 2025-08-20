@@ -1,24 +1,9 @@
 import csv
 import math
+from pathlib import Path
 
-# Load nodes and create ID mapping
-nodes = {}
-id_mapping = {}
-with open('data/nodes.csv', 'r', encoding='utf-8') as f:
-    reader = csv.DictReader(f)
-    counter = 1
-    for row in reader:
-        try:
-            # Skip rows with empty or invalid coordinates
-            if row['lat'].strip() and row['lon'].strip():
-                lat = float(row['lat'].strip())
-                lon = float(row['lon'].strip())
-                nodes[counter] = (lat, lon)
-                id_mapping[row['id']] = counter
-                counter += 1
-        except ValueError:
-            print(f"Skipping node {row['id']} due to invalid coordinates: {row['lat']}, {row['lon']}")
-            continue
+NODES_CSV = Path('data/nodes.csv')
+EDGES_CSV = Path('data/edges.csv')
 
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371000  # meters
@@ -28,29 +13,44 @@ def haversine(lat1, lon1, lat2, lon2):
     a = math.sin(dphi/2)**2 + math.cos(phi1)*math.cos(phi2)*math.sin(dlambda/2)**2
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
-max_distance = 500  # meters, increased for better connectivity
+def load_nodes():
+    nodes = {}
+    with NODES_CSV.open('r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            try:
+                if row['lat'].strip() and row['lon'].strip():
+                    node_id = int(row['id'])  # preserve original id
+                    lat = float(row['lat'].strip())
+                    lon = float(row['lon'].strip())
+                    nodes[node_id] = (lat, lon)
+            except Exception as e:
+                print(f"Skipping node {row.get('id')} due to parse error: {e}")
+    return nodes
 
-edges = []
-node_ids = list(nodes.keys())
-print(f"Processing {len(node_ids)} nodes...")
+def build_edges(nodes, max_distance=500):
+    ids = list(nodes.keys())
+    edges = []
+    print(f"Processing {len(ids)} nodes (preserving original IDs)...")
+    for i in range(len(ids)):
+        lat1, lon1 = nodes[ids[i]]
+        for j in range(i+1, len(ids)):
+            lat2, lon2 = nodes[ids[j]]
+            dist = haversine(lat1, lon1, lat2, lon2)
+            if dist <= max_distance:
+                edges.append((ids[i], ids[j], dist))
+    print(f"Found {len(edges)} connections within {max_distance}m")
+    return edges
 
-for i in range(len(node_ids)):
-    for j in range(i+1, len(node_ids)):
-        id1, id2 = node_ids[i], node_ids[j]
-        lat1, lon1 = nodes[id1]
-        lat2, lon2 = nodes[id2]
-        dist = haversine(lat1, lon1, lat2, lon2)
-        if dist <= max_distance:
-            edges.append((id1, id2, dist))
+def write_edges(edges):
+    with EDGES_CSV.open('w', newline='', encoding='utf-8') as f:
+        w = csv.writer(f)
+        w.writerow(['fromId', 'toId', 'distanceMeters', 'speedKph', 'undirected'])
+        for a,b,d in edges:
+            w.writerow([a,b, round(d,1), 5, 1])
+    print("edges.csv generated successfully (ID-preserving)")
 
-print(f"Found {len(edges)} connections within {max_distance}m")
-
-with open('data/edges.csv', 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    writer.writerow(['fromId', 'toId', 'distanceMeters', 'speedKph', 'undirected'])
-    for fromId, toId, dist in edges:
-        speed = 5  # walking speed in km/h
-        undirected = 1
-        writer.writerow([fromId, toId, round(dist, 1), speed, undirected])
-
-print("edges.csv generated successfully!")
+if __name__ == '__main__':
+    nodes = load_nodes()
+    edges = build_edges(nodes)
+    write_edges(edges)

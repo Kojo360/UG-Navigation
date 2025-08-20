@@ -1,0 +1,94 @@
+id,name,lat,lon,type
+1,SG-SSB,5.6478457,-0.1789641,atm
+2,Total,5.647492,-0.178974,fuel
+3,Legon Police Station,5.6506714,-0.179585,police
+4,Institute For Environment & Sanitation Studies,5.6535146,-0.1819874,college
+5,,5.6476845,-0.1816696,fuel
+6,Ecobank,5.6519994,-0.188485,bank
+7,Republic Bank,5.6432313,-0.1849777,bank
+8,CalBank,5.6383953,-0.1707045,bank
+9,,5.6450876,-0.1898663,restaurant
+10,Bush Canteen,5.6480697,-0.1809222,restaurant
+11,University Fire Station Legon,5.6484568,-0.1812207,fire_station
+12,Republic Bank,5.6493371,-0.1870528,atm
+13,CalBank,5.6425946,-0.1857784,atm
+14,All Banks,5.6469774,-0.1865162,atm
+15,Access Bank,5.6429499,-0.1858097,bank
+16,Consolidated Bank Ghana,5.667507,-0.1787102,bank
+17,Koko Joint,5.6512819,-0.1796424,fast_food
+18,West Africa Centre for Crop Improvement,5.6491112,-0.1841306,school
+19,UMB,5.6595227,-0.1654528,bank
+20,Prudential Bank,5.6429477,-0.1859194,bank
+21,Stanbic Bank,5.6600823,-0.1774304,bank
+22,Republic Bank,5.6429518,-0.1857129,bank
+23,,5.6500789,-0.1856612,fountain
+24,Ernest Chemist,5.6531812,-0.1791792,pharmacy
+25,Standard Chartered,5.6352667,-0.1722766,bank
+26,Ecobank,5.6678814,-0.1881261,atm
+27,Absa,5.6508864,-0.1863873,bank
+28,Legon Hall Barbeque Joint,5.6487354,-0.1895287,restaurant
+29,GCB Bank,5.6519986,-0.1795931,bank
+30,,5.6480385,-0.179018,pharmacy
+31,Volta Café,5.6516613,-0.1894537,internet_cafe
+32,Zenith,5.6516214,-0.1891882,atm
+33,,5.650167,-0.1857845,bench
+34,,5.6494717,-0.1855485,bench
+35,,5.6494697,-0.1857711,bench
+36,,5.6496605,-0.1855519,bench
+37,,5.6496505,-0.1857631,bench
+38,Fidelity Bank,5.6508028,-0.1890253,atm
+39,Prudential Bank,5.6508039,-0.1889738,atm
+40,GCB Bank,5.646781,-0.1875734,atm
+41,Zenith Bank,5.6468339,-0.1875034,atm
+42,Access Bank,5.6600709,-0.1652768,atm
+43,Radio Univers,5.6517917,-0.180996,studio
+44,School of Communication Studies,5.6517512,-0.1812907,school
+45,,5.6520261,-0.1815507,bench
+46,Benzola Supermarket and Mini Restaurant,5.6478885,-0.1854412,restaurant
+47,,5.6457368,-0.1838311,parking
+48,School of Performing Art,5.6496935,-0.1811913,school
+49,,5.6460071,-0.1870441,fountain
+50,,5.6429471,-0.1863194,parking
+51,Consolidated Bank Ghana,5.6430552,-0.1856608,bank
+52,Baba's Special Kebab,5.64211,-0.1857203,fast_food
+53,Physics,5.6519893,-0.1858952,college
+54,Mobile Money,5.6516696,-0.1890355,payment_centre
+55,,5.6529295,-0.1870426,fountain
+56,Balme Library,5.6511292,-0.1870251,fountain
+57,,5.6500722,-0.1854587,restaurant
+58,,5.6453931,-0.1871163,restaurant
+59,Commonwealth Dinning hall,5.6513099,-0.1925829,restaurant
+60,Food vendors,5.6510658,-0.192115,marketplace
+61,small food vendor,5.6484043,-0.1854504,restaurant
+62,,5.6482875,-0.1799882,waste_basket
+63,,5.6512161,-0.1836098,parking
+64,,5.6513422,-0.1824389,waste_basket
+65,DHL,5.6480878,-0.1790256,post_office
+66,,5.6488877,-0.179622,waste_basket
+67,Pent Food Court,5.656204,-0.180673,restaurant
+68,Department of Plant and Environmental Biology,5.6536902,-0.1865526,university
+69,Department of Mathematics,5.6538762,-0.184413,school
+70,Cedi Conference Centre,5.6516029,-0.1882722,community_centre
+71,University of Ghana Business School,5.6528087,-0.188627,college
+72,Ecobank,5.6595372,-0.1676129,atm
+73,School of Engineering Sciences,5.6555123,-0.1830511,college
+74,Amphitheatre Grounds,5.6506396,-0.1937105,theatre
+75,Muslim Prayer Lounge,5.6507792,-0.1933811,place_of_worship
+76,Commonwealth Hall Chapel,5.6500788,-0.1926101,place_of_worship
+77,Joepharma Pharmacy,5.6504151,-0.1915174,pharmacy
+78,Department of Physics,5.6514369,-0.1860522,university
+79,Hall Library,5.6464316,-0.1872899,library
+80,Department of Animal Biology and Conservation Science,5.6537135,-0.1877829,university
+81,Mishvet Veterinary Home Call Services,5.6468285,-0.1855157,veterinary
+82,Night Market,5.6425034,-0.1862823,marketplace
+83,GIS Lab A2,5.6509856,-0.183497,fixme
+84,GCB Bank ATM,5.6510275,-0.1875888,atm
+85,Commonwealth Hall Library,5.6506539,-0.1935633,library
+86,Balme Library Fountain,5.6510528,-0.1870679,fountain
+87,Economics Department,5.6511659,-0.1874726,fixme
+88,Standard Chartered ATM,5.6678701,-0.1881448,atm
+89,,5.6519751,-0.1797098,atm
+90,,5.6534707,-0.1830767,parking
+91,ADB,5.643196,-0.184896,bank
+92,,5.6521177,-0.1870887,school
+93,,5.6498848,-0.1874828,school
