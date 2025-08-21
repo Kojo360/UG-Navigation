@@ -6,46 +6,25 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Mode (walk/drive/roadbatch) [walk]: ");
-        String mode = sc.nextLine().trim().toLowerCase();
-        if (mode.isEmpty()) mode = "walk";
+        // drive-only mode
+        String mode = "drive";
 
-        Graph graph;
-        if (mode.startsWith("road")) {
-            // Determine which road graph to load
-            String baseMode;
-            if (mode.equals("roadbatch")) {
-                System.out.print("Batch mode: walk or drive? [drive]: ");
-                String batchMode = sc.nextLine().trim().toLowerCase();
-                if (batchMode.isEmpty()) batchMode = "drive";
-                baseMode = batchMode;
-            } else {
-                baseMode = (mode.contains("drive") ? "drive" : "walk");
-            }
-            String nodesFile = "data/road_" + baseMode + "_nodes.csv";
-            String edgesFile = "data/road_" + baseMode + "_edges.csv";
-            File nf = new File(nodesFile);
-            File ef = new File(edgesFile);
-            if (!nf.exists() || !ef.exists()) {
-                System.out.println("Missing road graph files for mode '"+baseMode+"'. Please run: python build_road_graph.py --geojson <file> --mode "+baseMode);
-                return;
-            }
-            graph = RoadGraphLoader.load(nodesFile, edgesFile);
-            System.out.println("Loaded road graph ("+baseMode+") nodes=" + graph.nodes.size());
-            if (mode.equals("roadbatch")) {
-                // Snap POIs and export distance matrix then exit
-                Graph poiGraph = new Graph();
-                loadNodes(poiGraph, "data/nodes.csv");
-                Map<Integer,Integer> snap = snapPOIs(poiGraph, graph, 30.0);
-                exportBatchDistances(poiGraph, graph, snap, "data/batch_distances_"+baseMode+".csv");
-                System.out.println("Batch distances exported -> data/batch_distances_"+baseMode+".csv");
-                return;
-            }
-        } else {
-            graph = new Graph();
-            loadNodes(graph, "data/nodes.csv");
-            loadEdges(graph, "data/edges.csv");
+        // Load drive road graph
+        String baseMode = "drive";
+        String nodesFile = "data/road_" + baseMode + "_nodes.csv";
+        String edgesFile = "data/road_" + baseMode + "_edges.csv";
+        File nf = new File(nodesFile);
+        File ef = new File(edgesFile);
+        if (!nf.exists() || !ef.exists()) {
+            System.out.println("Missing road graph files for drive mode. Please run: python scripts/build_road_graph.py --geojson <file> --mode drive");
+            return;
         }
+        Graph graph = RoadGraphLoader.load(nodesFile, edgesFile);
+        System.out.println("Loaded road graph (drive) nodes=" + graph.nodes.size());
+    // Load POIs for landmark detection
+    Graph poiGraph = new Graph();
+    loadNodes(poiGraph, "data/nodes.csv");
+
         RouteFinder finder = new RouteFinder(graph);
         System.out.print("Enter source name: ");
         String srcName = sc.nextLine();
@@ -55,36 +34,54 @@ public class Main {
         String keyword = sc.nextLine();
     // Resolve destination first (no context) then use that to refine source selection
     int dest = resolveNode(graph, destName, null, sc);
+    if (dest == -1) {
+        System.out.println("Invalid destination name: '" + destName + "'.");
+        List<Node> cand = collectCandidates(graph, destName, 5);
+        if (cand.isEmpty()) {
+            System.out.println("No similar names found in the dataset.");
+        } else {
+            System.out.println("Did you mean:");
+            for (Node n : cand) {
+                System.out.printf("  - %s (id=%d)\n", n.name, n.id);
+            }
+        }
+        return;
+    }
     int src = resolveNode(graph, srcName, dest, sc);
-        if (src == -1 || dest == -1) {
-            System.out.println("Invalid source or destination name.");
+    if (src == -1) {
+        System.out.println("Invalid source name: '" + srcName + "'.");
+        List<Node> cand = collectCandidates(graph, srcName, 5);
+        if (cand.isEmpty()) {
+            System.out.println("No similar names found in the dataset.");
+        } else {
+            System.out.println("Did you mean:");
+            for (Node n : cand) {
+                System.out.printf("  - %s (id=%d)\n", n.name, n.id);
+            }
+        }
+        return;
+    }
+    Node srcNode = graph.nodes.get(src);
+    Node destNode = graph.nodes.get(dest);
+    double straight = haversine(srcNode.lat, srcNode.lon, destNode.lat, destNode.lon);
+
+        // Ask to generate the route (single shortest route only)
+        boolean doGenerate = true;
+        if (keyword.isEmpty()) {
+            System.out.print("Generate route? (Y/n): ");
+            String resp = sc.nextLine().trim().toLowerCase();
+            doGenerate = resp.isEmpty() || resp.equals("y") || resp.equals("yes");
+        }
+        if (!doGenerate) {
+            System.out.println("No route generated.");
             return;
         }
-        Node srcNode = graph.nodes.get(src);
-        Node destNode = graph.nodes.get(dest);
-        double straight = haversine(srcNode.lat, srcNode.lon, destNode.lat, destNode.lon);
-        System.out.printf("From %s -> %s (straight-line %.1f m)\n", nameOrPlaceholder(srcNode), nameOrPlaceholder(destNode), straight);
-
-        boolean generateAlternatives = false;
-        if (keyword.isEmpty()) {
-            System.out.print("Generate up to 3 alternatives? (y/N): ");
-            String altAns = sc.nextLine().trim().toLowerCase();
-            generateAlternatives = altAns.equals("y") || altAns.equals("yes");
-        }
-        List<List<Integer>> routes;
+        List<List<Integer>> routes = new ArrayList<>();
         if (!keyword.isEmpty()) {
             List<Integer> route = finder.routeWithLandmark(src, dest, keyword);
-            routes = new ArrayList<>();
-            if (!route.isEmpty()) {
-                routes.add(route);
-            }
+            if (!route.isEmpty()) routes.add(route);
         } else {
-            if (generateAlternatives) {
-                routes = finder.kAlternatives(src, dest, 3);
-            } else {
-                routes = new ArrayList<>();
-                routes.add(finder.dijkstra(src, dest));
-            }
+            routes.add(finder.dijkstra(src, dest));
         }
         
         // Filter out empty routes
@@ -96,23 +93,56 @@ public class Main {
         }
         
         routes = finder.sortRoutes(routes);
-        for (int i = 0; i < routes.size(); i++) {
-            List<Integer> path = routes.get(i);
-            if (path.isEmpty()) continue;
-            System.out.printf("Route %d: ", i+1);
-            for (int j = 0; j < path.size(); j++) {
-                int id = path.get(j);
-                String nodeName = graph.nodes.get(id).name;
-                if (nodeName == null || nodeName.trim().isEmpty()) {
-                    nodeName = "Location " + id;
-                }
-                System.out.print(nodeName);
-                if (j < path.size() - 1) System.out.print(" -> ");
-            }
-            System.out.println();
-            System.out.printf("Distance: %.1f m, Time: %.1f min\n", finder.totalDistance(path), finder.totalTime(path)/60);
-            System.out.println();
+        // Print only the single best (shortest) route
+        List<Integer> bestPath = routes.get(0);
+        if (bestPath == null || bestPath.isEmpty()) {
+            System.out.println("No route found.");
+            return;
         }
+        // Print header and list of landmarks (exclude straight-line print per request)
+        System.out.printf("From %s -> %s (shortest path)\n", nameOrPlaceholder(srcNode), nameOrPlaceholder(destNode));
+        System.out.println("Landmarks on route:");
+        // Collect landmarks: if we have a separate poiGraph (road mode), snap each road-node to nearby POIs
+        List<String> landmarks = new ArrayList<>();
+        final double LANDMARK_RADIUS = 30.0; // meters
+        if (mode.startsWith("road")) {
+            for (int pid : bestPath) {
+                Node roadNode = graph.nodes.get(pid);
+                double bestD = LANDMARK_RADIUS + 1;
+                Node bestPoi = null;
+                for (Node poi : poiGraph.nodes.values()) {
+                    if (poi.name == null) continue;
+                    double d = haversine(roadNode.lat, roadNode.lon, poi.lat, poi.lon);
+                    if (d < bestD) { bestD = d; bestPoi = poi; }
+                }
+                if (bestPoi != null && bestD <= LANDMARK_RADIUS) {
+                    String nm = nameOrPlaceholder(bestPoi);
+                    if (!landmarks.contains(nm) && !(nm.equals(nameOrPlaceholder(srcNode)) || nm.equals(nameOrPlaceholder(destNode)))) {
+                        landmarks.add(nm);
+                    }
+                }
+            }
+        } else {
+            // For POI graph, list intermediate named nodes (exclude source/dest and unnamed)
+            for (int j = 1; j < bestPath.size() - 1; j++) {
+                Node n = graph.nodes.get(bestPath.get(j));
+                if (n == null) continue;
+                String nm = n.name;
+                if (nm == null) continue;
+                if (nm.trim().isEmpty()) continue;
+                if (!nm.startsWith("Unnamed") && !nm.equals(nameOrPlaceholder(srcNode)) && !nm.equals(nameOrPlaceholder(destNode))) {
+                    if (!landmarks.contains(nm)) landmarks.add(nm);
+                }
+            }
+        }
+    // Print landmarks as a straight sequence from source -> ... -> destination
+    List<String> seq = new ArrayList<>();
+    seq.add(nameOrPlaceholder(srcNode));
+    seq.addAll(landmarks);
+    seq.add(nameOrPlaceholder(destNode));
+    System.out.println(String.join(" -> ", seq));
+        System.out.printf("Distance: %.1f m, Time: %.1f min\n", finder.totalDistance(bestPath), finder.totalTime(bestPath)/60);
+        System.out.println();
         if (!routes.isEmpty()) {
             double best = finder.totalDistance(routes.get(0));
             if (straight > 0 && best/straight > 3) {
@@ -313,6 +343,32 @@ public class Main {
         n = n.replaceAll("[^a-z0-9 ]", "");
         n = n.replaceAll("\\s+", " ").trim();
         return n;
+    }
+
+    // Collect up to `max` candidate nodes matching a textual query (non-interactive)
+    static List<Node> collectCandidates(Graph graph, String rawQuery, int max) {
+        List<Node> results = new ArrayList<>();
+        if (rawQuery == null || rawQuery.trim().isEmpty()) return results;
+        String q = rawQuery.trim().toLowerCase();
+        // priority: exact, startsWith, contains
+        for (Node n : graph.nodes.values()) {
+            if (n.name == null) continue;
+            String ln = n.name.toLowerCase();
+            if (ln.equals(q)) results.add(n);
+        }
+        if (results.size() >= max) return results.subList(0, Math.min(max, results.size()));
+        for (Node n : graph.nodes.values()) {
+            if (n.name == null) continue;
+            String ln = n.name.toLowerCase();
+            if (ln.startsWith(q) && !results.contains(n)) results.add(n);
+        }
+        if (results.size() >= max) return results.subList(0, Math.min(max, results.size()));
+        for (Node n : graph.nodes.values()) {
+            if (n.name == null) continue;
+            String ln = n.name.toLowerCase();
+            if (ln.contains(q) && !results.contains(n)) results.add(n);
+        }
+        return results.size() > max ? results.subList(0, max) : results;
     }
 
     // --- POI snapping and batch distance export ---
