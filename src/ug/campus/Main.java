@@ -24,6 +24,7 @@ public class Main {
     // Load POIs for landmark detection
     Graph poiGraph = new Graph();
     loadNodes(poiGraph, "data/nodes.csv");
+    System.out.println("Loaded POIs: " + poiGraph.nodes.size());
 
         RouteFinder finder = new RouteFinder(graph);
         System.out.print("Enter source name: ");
@@ -33,10 +34,11 @@ public class Main {
         System.out.print("Enter landmark keyword (optional): ");
         String keyword = sc.nextLine();
     // Resolve destination first (no context) then use that to refine source selection
-    int dest = resolveNode(graph, destName, null, sc);
+    // Use the POI graph so we match named landmarks from data/nodes.csv instead of road node names
+    int dest = resolveNode(poiGraph, destName, null, sc);
     if (dest == -1) {
-        System.out.println("Invalid destination name: '" + destName + "'.");
-        List<Node> cand = collectCandidates(graph, destName, 5);
+    System.out.println("Invalid destination name: '" + destName + "'.");
+    List<Node> cand = collectCandidates(poiGraph, destName, 5);
         if (cand.isEmpty()) {
             System.out.println("No similar names found in the dataset.");
         } else {
@@ -47,10 +49,10 @@ public class Main {
         }
         return;
     }
-    int src = resolveNode(graph, srcName, dest, sc);
+    int src = resolveNode(poiGraph, srcName, dest, sc);
     if (src == -1) {
         System.out.println("Invalid source name: '" + srcName + "'.");
-        List<Node> cand = collectCandidates(graph, srcName, 5);
+        List<Node> cand = collectCandidates(poiGraph, srcName, 5);
         if (cand.isEmpty()) {
             System.out.println("No similar names found in the dataset.");
         } else {
@@ -61,8 +63,9 @@ public class Main {
         }
         return;
     }
-    Node srcNode = graph.nodes.get(src);
-    Node destNode = graph.nodes.get(dest);
+    // src/dest were resolved against the POI graph
+    Node srcNode = poiGraph.nodes.get(src);
+    Node destNode = poiGraph.nodes.get(dest);
     double straight = haversine(srcNode.lat, srcNode.lon, destNode.lat, destNode.lon);
 
         // Ask to generate the route (single shortest route only)
@@ -101,36 +104,22 @@ public class Main {
         }
         // Print header and list of landmarks (exclude straight-line print per request)
         System.out.printf("From %s -> %s (shortest path)\n", nameOrPlaceholder(srcNode), nameOrPlaceholder(destNode));
-        System.out.println("Landmarks on route:");
-        // Collect landmarks: if we have a separate poiGraph (road mode), snap each road-node to nearby POIs
+        // Collect landmarks by snapping each road node to the nearest POI (ordered along the path)
         List<String> landmarks = new ArrayList<>();
         final double LANDMARK_RADIUS = 30.0; // meters
-        if (mode.startsWith("road")) {
-            for (int pid : bestPath) {
-                Node roadNode = graph.nodes.get(pid);
-                double bestD = LANDMARK_RADIUS + 1;
-                Node bestPoi = null;
-                for (Node poi : poiGraph.nodes.values()) {
-                    if (poi.name == null) continue;
-                    double d = haversine(roadNode.lat, roadNode.lon, poi.lat, poi.lon);
-                    if (d < bestD) { bestD = d; bestPoi = poi; }
-                }
-                if (bestPoi != null && bestD <= LANDMARK_RADIUS) {
-                    String nm = nameOrPlaceholder(bestPoi);
-                    if (!landmarks.contains(nm) && !(nm.equals(nameOrPlaceholder(srcNode)) || nm.equals(nameOrPlaceholder(destNode)))) {
-                        landmarks.add(nm);
-                    }
-                }
+        for (int pid : bestPath) {
+            Node roadNode = graph.nodes.get(pid);
+            if (roadNode == null) continue;
+            double bestD = LANDMARK_RADIUS + 1;
+            Node bestPoi = null;
+            for (Node poi : poiGraph.nodes.values()) {
+                if (poi.name == null) continue;
+                double d = haversine(roadNode.lat, roadNode.lon, poi.lat, poi.lon);
+                if (d < bestD) { bestD = d; bestPoi = poi; }
             }
-        } else {
-            // For POI graph, list intermediate named nodes (exclude source/dest and unnamed)
-            for (int j = 1; j < bestPath.size() - 1; j++) {
-                Node n = graph.nodes.get(bestPath.get(j));
-                if (n == null) continue;
-                String nm = n.name;
-                if (nm == null) continue;
-                if (nm.trim().isEmpty()) continue;
-                if (!nm.startsWith("Unnamed") && !nm.equals(nameOrPlaceholder(srcNode)) && !nm.equals(nameOrPlaceholder(destNode))) {
+            if (bestPoi != null && bestD <= LANDMARK_RADIUS) {
+                String nm = nameOrPlaceholder(bestPoi);
+                if (!nm.equals(nameOrPlaceholder(srcNode)) && !nm.equals(nameOrPlaceholder(destNode))) {
                     if (!landmarks.contains(nm)) landmarks.add(nm);
                 }
             }
@@ -210,15 +199,15 @@ public class Main {
     // --- Enhanced disambiguation logic ---
     static int resolveNode(Graph graph, String rawQuery, Integer otherNodeId, Scanner sc) {
         if (rawQuery == null || rawQuery.trim().isEmpty()) return -1;
-        String q = rawQuery.trim().toLowerCase();
+        String q = normalizeName(rawQuery);
 
-        // Collect candidates: exact, startsWith, contains (in that priority)
+        // Collect candidates using normalized names: exact, startsWith, contains (in that priority)
         List<Node> exact = new ArrayList<>();
         List<Node> starts = new ArrayList<>();
         List<Node> contains = new ArrayList<>();
         for (Node n : graph.nodes.values()) {
             if (n.name == null || n.name.isEmpty()) continue;
-            String ln = n.name.toLowerCase();
+            String ln = normalizeName(n.name);
             if (ln.equals(q)) exact.add(n);
             else if (ln.startsWith(q)) starts.add(n);
             else if (ln.contains(q)) contains.add(n);
@@ -349,23 +338,23 @@ public class Main {
     static List<Node> collectCandidates(Graph graph, String rawQuery, int max) {
         List<Node> results = new ArrayList<>();
         if (rawQuery == null || rawQuery.trim().isEmpty()) return results;
-        String q = rawQuery.trim().toLowerCase();
-        // priority: exact, startsWith, contains
+        String q = normalizeName(rawQuery);
+        // priority: exact, startsWith, contains (working on normalized names)
         for (Node n : graph.nodes.values()) {
             if (n.name == null) continue;
-            String ln = n.name.toLowerCase();
+            String ln = normalizeName(n.name);
             if (ln.equals(q)) results.add(n);
         }
         if (results.size() >= max) return results.subList(0, Math.min(max, results.size()));
         for (Node n : graph.nodes.values()) {
             if (n.name == null) continue;
-            String ln = n.name.toLowerCase();
+            String ln = normalizeName(n.name);
             if (ln.startsWith(q) && !results.contains(n)) results.add(n);
         }
         if (results.size() >= max) return results.subList(0, Math.min(max, results.size()));
         for (Node n : graph.nodes.values()) {
             if (n.name == null) continue;
-            String ln = n.name.toLowerCase();
+            String ln = normalizeName(n.name);
             if (ln.contains(q) && !results.contains(n)) results.add(n);
         }
         return results.size() > max ? results.subList(0, max) : results;
